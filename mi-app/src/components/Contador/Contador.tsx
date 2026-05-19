@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Contador.css";
 
 export function Contador() {
   const [cuenta, setCuenta] = useState(0);
@@ -41,15 +42,20 @@ export function Contador() {
 */
 
   return (
-    <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-      <button type="button" onClick={handleRestar}>
-        −
-      </button>
-      <span>Cuenta: {cuenta} </span>
-      <button type="button" onClick={handleSumar}>
-        +
-      </button>
-      <button type="button" onClick={() => setCuenta(0)}>
+    <div className="contenedor">
+      <div className="contador">
+        <button className="boton-pequeno" onClick={handleRestar}>
+          −
+        </button>
+
+        <span className="texto">Contador: {cuenta}</span>
+
+        <button className="boton-pequeno" onClick={handleSumar}>
+          +
+        </button>
+      </div>
+
+      <button className="reiniciar" onClick={() => setCuenta(0)}>
         Reiniciar
       </button>
     </div>

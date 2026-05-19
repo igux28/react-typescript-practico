@@ -1,0 +1,69 @@
+.contenedor {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ centra TODO */
+
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* fila contador */
+.contador {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ centra en horizontal */
+  gap: 16px;
+  width: 100%;
+}
+
+/* texto */
+.texto {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* botones pequeños */
+.boton-pequeno {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #6c757d;
+  color: white;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-pequeno:hover {
+  background: #565e64;
+}
+
+/* botón reiniciar */
+.reiniciar {
+  margin-top: 16px;
+  padding: 8px 16px;
+
+  background: #dc3545;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.reiniciar:hover {
+  background: #b02a37;
+}
