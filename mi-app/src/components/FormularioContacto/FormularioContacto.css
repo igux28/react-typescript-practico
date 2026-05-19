@@ -1,0 +1,55 @@
+/* Contenedor principal centrado */
+.formulario {
+  max-width: 500px;            /* limita el ancho */
+  margin: 40px auto;           /* centra horizontalmente */
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout de campos */
+.campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.campo label {
+  width: 80px;
+  font-weight: 600;
+}
+
+/* inputs */
+.campo input,
+.campo textarea {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* botón estilo bootstrap */
+.boton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0d6efd;   /* azul bootstrap */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  align-self: flex-start;      /* evita que ocupe todo el ancho */
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #084dc3;
+}
+
+.boton:disabled {
+  background-color: #0d6efd;
+  opacity: 0.65;
+  cursor: not-allowed;
+}

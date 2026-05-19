@@ -12,6 +12,34 @@ export function Contador() {
     else setCuenta((prev) => prev - 1);
   };
 
+  //Otra manera de hacer el incremento y decremento
+  //usando una función pura.
+  //Más información buscando info de "reductor function"
+  //Spread operator
+  const reductor = (estado, accion) => {
+    switch (accion) {
+      case "inc":
+        return estado + 1;
+      case "dec":
+        return estado - 1;
+      default:
+        return estado;
+    }
+  };
+
+  /*
+  const reductorConSpreadOperator = (estado, accion) => {
+    switch (accion) {
+      case "inc":
+        return {...estado, estado + 1};
+      case "dec":
+        return estado - 1;
+      default:
+        return estado;
+    }
+  };
+*/
+
   return (
     <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
       <button type="button" onClick={handleRestar}>
