@@ -5,8 +5,9 @@ import { Contador } from "./components/Contador/Contador";
 import { Tarjeta } from "./components/Tarjeta/Tarjeta";
 import { FormularioContacto } from "./components/FormularioContacto/FormularioContacto";
 import { useState } from "react";
-import { LayoutIntermedio } from "./components/PanelAccion/LayoutIntermedio";
 import { Sidebar } from "./components/PanelAccion/SideBar";
+import { LayoutLang } from "./components/Language/LayoutLang";
+import { LangProvider } from "./context/LangContext";
 
 function App() {
   //PROP DRILLING EXAMPLE
@@ -15,6 +16,16 @@ function App() {
 
   return (
     <div>
+      <div>
+        <h1>Select Lang</h1>
+        <LangProvider>
+          <LayoutLang>
+            <p>Contenido principal de la página.</p>
+          </LayoutLang>
+        </LangProvider>
+      </div>
+      <hr></hr>
+
       <div>
         <h1>Noticias</h1>
         {noticias.length === 0 && <p>No hay noticias publicadas.</p>}
@@ -50,12 +61,8 @@ function App() {
       <div>
         <h1>PROP DRILLING</h1>
         <p>Total (App): {total}</p>
-  
-        <Sidebar
-          mensaje={`Clicks: ${total}`}
-          onAccion={incrementar}
-        />
 
+        <Sidebar mensaje={`Clicks: ${total}`} onAccion={incrementar} />
       </div>
     </div>
   );
