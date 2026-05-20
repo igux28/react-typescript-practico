@@ -6,6 +6,7 @@ import { Tarjeta } from "./components/Tarjeta/Tarjeta";
 import { FormularioContacto } from "./components/FormularioContacto/FormularioContacto";
 import { useState } from "react";
 import { LayoutIntermedio } from "./components/PanelAccion/LayoutIntermedio";
+import { Sidebar } from "./components/PanelAccion/SideBar";
 
 function App() {
   //PROP DRILLING EXAMPLE
@@ -49,7 +50,12 @@ function App() {
       <div>
         <h1>PROP DRILLING</h1>
         <p>Total (App): {total}</p>
-        <LayoutIntermedio mensaje={`Clicks: ${total}`} onAccion={incrementar} />
+  
+        <Sidebar
+          mensaje={`Clicks: ${total}`}
+          onAccion={incrementar}
+        />
+
       </div>
     </div>
   );
