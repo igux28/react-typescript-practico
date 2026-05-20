@@ -1,3 +1,22 @@
+/**
+ * COMPONENTE: FormularioContacto
+ *
+ * Este componente demuestra cómo crear un formulario controlado en React.
+ * Gestiona tres campos: nombre, email y mensaje, cada uno con su propio estado.
+ *
+ * CARACTERÍSTICAS PRINCIPALES:
+ * - Campos controlados: el valor del input está sincronizado con el estado (value + onChange)
+ * - Validación de email en tiempo real: usa la función utilitaria `emailValido`
+ * - Botón deshabilitado: el botón "Enviar" solo está activo si el email es válido
+ * - Feedback al usuario: muestra un mensaje de error si el email no es válido
+ *
+ * CONCEPTOS CLAVE:
+ * - Formularios controlados: React controla el valor y los cambios
+ * - Estado múltiple: usa varios useState para cada campo
+ * - Validación: integra una función utilitaria para validar datos
+ * - Atributos deshabilitados: controla la interactividad con props
+ */
+
 import { emailValido } from "../../utils/validarEmail";
 import "./FormularioContacto.css";
 import { useState } from "react";

@@ -1,3 +1,33 @@
+/**
+ * CONTEXT: LangContext
+ *
+ * Este archivo define un Context que gestiona el idioma de la aplicación.
+ * Permite a cualquier componente acceder al idioma actual sin pasar props.
+ *
+ * COMPONENTES DEL ARCHIVO:
+ *
+ * 1. TIPOS:
+ *    - Lang: tipo union que define los idiomas soportados (es, en, fr)
+ *    - Traducciones: objeto con las claves de traducción disponibles
+ *
+ * 2. DATOS:
+ *    - traducciones: objeto Record que mapea cada idioma a sus traducciones
+ *
+ * 3. CONTEXTO:
+ *    - LangContext: context que provee el objeto Traducciones actual
+ *
+ * 4. PROVIDER:
+ *    - LangProvider: componente que debe envolver la aplicación
+ *    - Gestiona el estado del idioma
+ *    - Proporciona un selector (<select>) para cambiar el idioma
+ *    - Reenvía las traducciones a través del context
+ *
+ * USO:
+ * - Envuelve tu app con <LangProvider> en main.tsx o App.tsx
+ * - En cualquier componente hijo, usa: const t = useContext(LangContext)
+ * - Accede a traducciones con t.bienvenida, t.despedida, etc.
+ */
+
 import { createContext, useState, type ReactNode } from "react";
 
 export type Lang = "es" | "en" | "fr";

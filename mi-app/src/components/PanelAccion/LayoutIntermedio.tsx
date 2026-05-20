@@ -1,3 +1,23 @@
+/**
+ * COMPONENTE: LayoutIntermedio
+ *
+ * Este componente es otro ejemplo de "prop drilling" en la cadena de componentes.
+ * Recibe props del padre (Sidebar), las valida explícitamente (comentario visible),
+ * y las reenvía al componente hijo (PanelAccion).
+ *
+ * CARACTERÍSTICAS PRINCIPALES:
+ * - Componente intermedio que solo reenvía props
+ * - No utiliza las props que recibe (mensaje y onAccion)
+ * - Aplica su propio estilo para separación visual
+ * - Documentado para mostrar el flujo de datos
+ *
+ * CONCEPTOS CLAVE:
+ * - Prop drilling: segundo nivel de reenvío de props
+ * - Props intermedias: las props se transmiten sin modificación
+ * - Mantenibilidad: cada nivel adicional hace el código más difícil de seguir
+ * - Alternativa: Context API sería más limpia para este patrón
+ */
+
 import { PanelAccion } from "./PanelAccion";
 
 type LayoutIntermedioProps = {

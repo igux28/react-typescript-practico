@@ -8,6 +8,9 @@ import { useState } from "react";
 import { Sidebar } from "./components/PanelAccion/SideBar";
 import { LayoutLang } from "./components/Language/LayoutLang";
 import { LangProvider } from "./context/LangContext";
+import { ThemeProvider } from "./context/ThemeContext/ThemeContext";
+import { PanelTema } from "./components/PanelTema/PanelTema";
+import { ContadorReducer } from "./components/ContadorReducer/ContadorReducer";
 
 function App() {
   //PROP DRILLING EXAMPLE
@@ -16,6 +19,12 @@ function App() {
 
   return (
     <div>
+      <div>
+        <ThemeProvider>
+          <h1 style={{ padding: "1rem 1rem 0" }}>Tema con Context</h1>
+          <PanelTema />
+        </ThemeProvider>
+      </div>
       <div>
         <h1>Select Lang</h1>
         <LangProvider>
@@ -63,6 +72,12 @@ function App() {
         <p>Total (App): {total}</p>
 
         <Sidebar mensaje={`Clicks: ${total}`} onAccion={incrementar} />
+      </div>
+
+      <hr></hr>
+      <div style={{ padding: "1rem" }}>
+        <h1>useReducer</h1>
+        <ContadorReducer />
       </div>
     </div>
   );

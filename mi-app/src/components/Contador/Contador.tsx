@@ -1,3 +1,20 @@
+/**
+ * COMPONENTE: Contador
+ *
+ * Este es un componente simple que demuestra cómo usar el hook `useState` de React.
+ * Permite incrementar y decrementar un contador con restricciones:
+ * - No permite números negativos (mínimo es 0)
+ * - No permite superar 10 (máximo es 10)
+ *
+ * El estado se gestiona de forma local usando `useState`, y cada cambio actualiza
+ * automáticamente la vista. Incluye un botón de reinicio para volver a 0.
+ *
+ * CONCEPTOS CLAVE:
+ * - useState: Hook para añadir estado a componentes funcionales
+ * - Validación de límites antes de actualizar el estado
+ * - Event handlers (onClick) para capturar interacciones del usuario
+ */
+
 import { useState } from "react";
 import "./Contador.css";
 
