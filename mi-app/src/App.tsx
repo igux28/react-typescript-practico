@@ -4,8 +4,14 @@ import { Noticia } from "./components/Noticia/Noticia";
 import { Contador } from "./components/Contador/Contador";
 import { Tarjeta } from "./components/Tarjeta/Tarjeta";
 import { FormularioContacto } from "./components/FormularioContacto/FormularioContacto";
+import { useState } from "react";
+import { LayoutIntermedio } from "./components/PanelAccion/LayoutIntermedio";
 
 function App() {
+  //PROP DRILLING EXAMPLE
+  const [total, setTotal] = useState(0);
+  const incrementar = () => setTotal((t) => t + 1);
+
   return (
     <div>
       <div>
@@ -37,6 +43,13 @@ function App() {
       <div>
         <h1>Formulario</h1>
         <FormularioContacto />
+      </div>
+
+      <hr></hr>
+      <div>
+        <h1>PROP DRILLING</h1>
+        <p>Total (App): {total}</p>
+        <LayoutIntermedio mensaje={`Clicks: ${total}`} onAccion={incrementar} />
       </div>
     </div>
   );
